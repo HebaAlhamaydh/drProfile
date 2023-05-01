@@ -1,0 +1,62 @@
+.card {
+    border: 1px solid #ccc;
+    padding: 20px;
+    width: 400px;
+    height: 222px;
+  
+    /* text-align: center; */
+  }
+  
+  /* .title  {
+      width:100px;
+       text-overflow:"ellipsis";
+       overflow:"hidden";
+       
+    } */
+  
+    .title :hover {
+      /* overflow: visible; */
+      /* display: block; */
+    }
+    /* .title {
+      overflow: hidden;
+      height: 20px;
+      line-height: 20px;
+      text-overflow: ellipsis;
+      white-space: nowrap;
+    }
+    .title:hover {
+      height: auto;
+    } */
+  .badge {
+    margin-left: 8px;
+    text-transform: uppercase;
+    font-size: 13px;
+    font-weight: 700;
+    color: #fff;
+    border-radius: 2px;
+    padding: 3px 10px;
+  }
+  .badge1 {
+    background: #3996dd;
+  }
+  
+  .badge2 {
+    background: #1051a1;
+  }
+  .badge3 {
+    background: #c53f3f;
+  }
+  .badge4 {
+    background: #7397d3;
+  }
+  
+  .card_img {
+    margin-right: 10px;
+    float: left;
+    width: 90px; /* set the desired width */
+    height: 90px; /* set the desired height */
+    border-radius: 50%; /* set the border radius to half of the width/height */
+    overflow: hidden; /* hide any parts of the image that are outside the circle */
+  }
+  

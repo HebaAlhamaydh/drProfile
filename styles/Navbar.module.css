@@ -1,0 +1,33 @@
+.nav{
+    padding: 5px 0;
+    box-shadow: 2px 1px 1px #ccc;
+    /* background-color: white; */
+  }
+  .container{
+    
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.container ul{
+    display:flex;
+}
+.container ul li {
+    margin-left:30px;
+}
+.container ul li div{
+    line-height: 100px;
+    /* padding: 30px 20px; */
+}
+.container ul li a{
+    color: rgb(87,86,86);
+}
+
+.button {
+    padding:20px 30px;
+    background-color: white;
+    margin-top: 20px;
+   border-radius: 5px;
+   border-color:   #ccc;
+    display: block; /*Block-level elements are those that take up the full width of their container and have line breaks before and after them, which means that they are displayed on their own line. */
+  }
