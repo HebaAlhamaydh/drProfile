@@ -48,6 +48,7 @@ const Reviews=locale==="en"?`Reviews`:`التقييم`
             src={`https://s3.dualstack.eu-west-1.amazonaws.com/curaapps/${ProfilePicThumbnail}`}
             width="165"
             height="165"
+            alt="profile"
             style={{ borderRadius: "50%", maginTop: "50px" }}
           />
           <h1>{name}</h1>

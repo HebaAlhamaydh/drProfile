@@ -58,6 +58,7 @@ export default function Navbar() {
                 src={search}
                 width="20"
                 height="20"
+                alt="search"
                 className={styles.searchIcon}
               />
             </li>
