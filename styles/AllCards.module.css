@@ -1,23 +1,13 @@
 .card {
     border: 1px solid #ccc;
     padding: 20px;
-    width: 400px;
-    height: 222px;
-  
+    width: 733.33px;
+    height: 182px;
+  margin: 10px;
     /* text-align: center; */
   }
   
-  /* .title  {
-      width:100px;
-       text-overflow:"ellipsis";
-       overflow:"hidden";
-       
-    } */
   
-    .title :hover {
-      /* overflow: visible; */
-      /* display: block; */
-    }
     /* .title {
       overflow: hidden;
       height: 20px;

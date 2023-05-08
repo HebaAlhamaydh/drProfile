@@ -1,26 +1,38 @@
-@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;500&display=swap');
+/* @import url(//db.onlinewebfonts.com/c/d78f5d2c76185fa07aaf8dd729eef33e?family=DIN+Next+LT+Arabic); */
+@import url(//db.onlinewebfonts.com/c/d78f5d2c76185fa07aaf8dd729eef33e?family=DIN+Next+LT+Arabic);
+
+
 *{
   padding:0;
   margin:0;
   box-sizing: border-box;
+  
 }
 body{
-  font-family: 'Roboto', sans-serif;
+  font-family: "DIN Next LT Arabic"; 
+ 
+}
+.layout {
+  direction: rtl;
+}
+.layout.direction {
+  direction: ltr;
 }
 
-/* a {
- 
-  text-decoration: none;
-} */
 
+
+.container-card{
+display:flex;
+justify-content: space-between;
+}
 
 ul{
   list-style-type: none;
 }
 
 .container{
-  width:1150px;
-  max-width: 75%;
+  width:85%;
+  
   margin:0 auto;
 }
 .home{
@@ -31,7 +43,7 @@ ul{
 }
 .main{
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
   grid-gap: 1rem;
   padding: 50px 0;
 }
@@ -42,8 +54,7 @@ ul{
   color: brown;
   display: block; /*Block-level elements are those that take up the full width of their container and have line breaks before and after them, which means that they are displayed on their own line. */
 }
-@media(min-width:50em){
-  .button{
-    
-  }
+h1, h2, h3, h4, h5 {
+  font-weight: bold;
+  
 }

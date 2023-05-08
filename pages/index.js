@@ -9,14 +9,13 @@ export default function Home(doctors) {
   // console.log(doctors);
   return (
     <main className="container">
-   
+
         <Head>
           <title>كيورا|</title>
-
           <link rel="icon" type="image/png" href={myIcon} />
+          {/* <link href="//db.onlinewebfonts.com/c/d78f5d2c76185fa07aaf8dd729eef33e?family=DIN+Next+LT+Arabic" rel="stylesheet" type="text/css"/> */}
         </Head>
       
-
       <div className="home">
         <h1>FEATURED DOCTORS</h1>
         <h3 style={{ color: "#ccc", fontWeight: "300" }}>
@@ -39,7 +38,7 @@ export async function getStaticProps() {
   );
 
   const doctors = doctorData.data;
-  // console.log(doctors.Results[4]);
+  // console.log(doctors.Result);
   return {
     //to send products to home componet
     props: doctors.Results[4],

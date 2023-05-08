@@ -1,0 +1,113 @@
+.container {
+  display: flex;
+  justify-content: right;
+
+}
+.headerInfo {
+  font-size: 29px;
+}
+.rightContainer {
+  width: 30%;
+}
+.rate {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 10px;
+}
+.doctorProfile {
+  padding-top: 5px;
+  padding-bottom: 5px;
+  list-style: none;
+}
+
+.alpha {
+  display: flex;
+  gap: 1rem;
+  list-style: none;
+}
+.review {
+  margin-left: 20px;
+}
+.rev {
+  font-size: 16px;
+  color: #8a8a8f;
+  display: block;
+  line-height: 30px;
+}
+
+.right {
+  margin: 30px 0;
+}
+
+.leftContainer {
+  margin: 50px;
+  width: 70%;
+  display: flex;
+  flex-direction: column;
+}
+.card {
+  direction: rtl;
+  border-radius: 2px;
+  background-color: #fff;
+  overflow: hidden;
+  box-shadow: 0 2px 10px 0 rgba(102, 118, 131, 0.15);
+  padding: 30px 40px;
+  margin-block: 10px;
+}
+.reviews {
+  display: flex;
+  flex-direction: column;
+}
+
+.contentCard {
+  padding: 10px 0 0 20px;
+  font-size: 17px;
+  font-weight: 600;
+}
+.list {
+  display: block;
+  list-style-type: disc;
+  margin-block-start: 1em;
+  margin-block-end: 1em;
+  margin-inline-start: 0px;
+  margin-inline-end: 0px;
+  padding-inline-start: 40px;
+}
+.line {
+  border-color: #d9d9d9;
+  border-style: solid;
+}
+.btn {
+  width: 100%;
+  padding: 25px 50px;
+  font-size: 22px;
+  background-color: #3996dd;
+  color: #fff;
+  text-transform: uppercase;
+  font-weight: 600;
+  border-radius: 0;
+  border: none;
+  letter-spacing: 0;
+  height: auto;
+  line-height: 1;
+  display: inline-block;
+  cursor: pointer;
+}
+.btn a {
+  text-decoration: none;
+  color: white;
+}
+.btn:hover {
+  background-color: #1151a1;
+}
+.btn:hover a {
+  text-decoration: underline;
+}
+.btn2 {
+  padding: 15px 20px;
+  text-align: right;
+  background-image: url(../public//images/arrow.png);
+  background-repeat: no-repeat;
+  background-position: center left 15px;
+  background-size: 30px;
+}

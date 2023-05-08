@@ -14,12 +14,22 @@ export default function allCards(doctors) {
         <h1>RESULTS</h1>
         
       </div>
- <div className="main">
-   {doctors.Items &&
-     doctors.Items.map((doctor) => (
-       <AllCards key={doctor.Id} doctor={doctor} />
-     ))}
- </div>
+      <div className='container-card'>
+      <div >
+
+{doctors.Items &&
+doctors.Items.map((doctor) => (
+ <AllCards key={doctor.Id} doctor={doctor} />
+
+))}
+</div>
+      <div style={{ border: '1px solid black' }}>
+
+        <h3>Filter</h3>
+      </div>
+     
+   
+      </div>
 </main>
     </>
    

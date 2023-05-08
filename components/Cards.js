@@ -2,15 +2,18 @@ import React from "react";
 import Rating from "react-rating-stars-component";
 import Image from "next/image";
 import styles from "../styles/Cards.module.css";
+import Link from "next/link";
 
 export default function Cards({ doctor }) {
   const {
+      
     Title_En,
     Info_En,
     RatingStars,
     Subtitle_En,
     TotalReviewsCount,
     PrimaryImage,
+    DocUserName
   } = doctor;
 
   //
@@ -18,16 +21,13 @@ export default function Cards({ doctor }) {
     <>
       <div className={styles.card}>
         <div className={styles.card_img}>
-          <Image
-            src={
-              PrimaryImage
-                ? PrimaryImage
-                : "https://cdn.pixabay.com/photo/2015/06/10/16/36/mark-804938_640.jpg"
-            }
+        <Link href={`/doctors/${DocUserName}`}><Image
+            src={PrimaryImage}
             alt="Pancake"
             width="100"
             height="100"
           />
+       </Link>
         </div>
         <div
           style={{
@@ -36,7 +36,7 @@ export default function Cards({ doctor }) {
             justifyContent: 'start',
           }}
         >
-          <h3 className={styles.title}>{Title_En}...</h3>
+            <Link href={`/doctors/${DocUserName}`} style={{textDecoration:'none',color:'black'}}><h3 className={styles.title}>{Title_En}...</h3></Link>
 
           {Subtitle_En === "SPECIALIST" ? (
             <div className={`${styles.badge} ${styles.badge1}`}>
@@ -68,7 +68,7 @@ export default function Cards({ doctor }) {
           />
           <p style={{ marginLeft: "8px" }}> {TotalReviewsCount} reviews</p>
         </div>
-        <p>
+        <p style={{paddingTop:'20px', fontWeight: "400",fontSize:'1rem',color:'#595959'}}>
           Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed non
           risus. Suspendisse lectus tortor, dignissim sit amet, adipiscing nec,
           ultricies sed, dolor.
