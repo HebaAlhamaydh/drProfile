@@ -6,10 +6,8 @@
   background-color: white;
   color: black;
   display: flex;
-  flex-direction: column;
-  justify-content: flex-start;
   align-items: center;
-  padding: 20px 100px;
+  padding: 0 100px;
   height: 70px;
   position: fixed;
   left: 0;
@@ -23,22 +21,26 @@
 .navList {
   list-style: none;
   display: flex;
-  flex-direction: row;
-  /* justify-content: flex-start; */
-  justify-content: space-between;
+  gap: 2rem;
   align-items: center;
   width: 100%;
   height: 30px;
   margin: 0;
-  padding-left: 10px;
-  padding-right: 10px;
+  padding-inline: 1rem;
 }
 .navList li {
   width: auto;
   margin-right: 20px;
 }
+.Navbar_btn__2_IOi {
+  margin-inline-start: auto !important;
+}
 /*****************search input******************/
-.search input{
+.search {
+  flex-grow: 1;
+  position: relative;
+}
+.search input {
   border: none;
   border: 1px solid #eaeaea !important;
   color: #303030 !important;
@@ -46,15 +48,16 @@
   background-color: transparent !important;
   padding: 10px 70px 10px 45px;
   /* display: block; */
-  width: 900px;
-  height: 70px;
+  flex-grow: 1;
+  width: 100%;
+  height: 4.5rem;
   font-size: 16px !important;
 }
 .searchIcon {
   position: absolute;
   top: 50%;
   transform: translateY(-50%);
-  inset-inline-start: 200px;
+  inset-inline-start: 1rem;
 }
 .link {
   color: black;
@@ -66,7 +69,8 @@
   height: 30px;
 }
 .btn {
-  margin: 0;
+  margin-inline-start: auto;
+  display: flex;
 }
 .login {
   border: 1px solid #ccc;
@@ -75,7 +79,6 @@
   background-color: #f7f7f7;
 }
 .btn li {
-  display: inline-block;
   border-radius: 5px;
   padding: 13px 30px;
   margin: 5px;
@@ -100,7 +103,7 @@
   border-right: 1px solid #eaeaea !important;
   background-color: transparent;
 }
-.langbtn2{
+.langbtn2 {
   border: none !important;
   padding-left: 0;
 }
@@ -111,7 +114,7 @@
   margin-right: 10px;
 }
 
-  /*****dropDown of menu Language*****/
+/*****dropDown of menu Language*****/
 
 .dropdownMenu {
   position: fixed;
@@ -150,15 +153,14 @@
 }
 .dropdownMenu li a:hover {
   color: #258ad7;
-
 }
 .rtlDirection {
-  direction: rtl; 
+  direction: rtl;
 }
 .ltrDirection {
-  direction: ltr; 
+  direction: ltr;
 }
-  /************dropDown of  menuHumberger********/
+/************dropDown of  menuHumberger********/
 .dropDownmenuHumberger {
   position: fixed;
   top: 4.375rem;
@@ -178,48 +180,44 @@
   visibility: visible;
 }
 .childOne ul li,
-.childTwo ul li{
-padding:10px;
+.childTwo ul li {
+  padding: 10px;
 }
 .childOne ul li a,
-.childTwo ul li a{
+.childTwo ul li a {
   text-decoration: none;
   color: black;
   font-size: 20px;
   /* font-weight: bold; */
 }
 
-  .childOne ul li a:hover,
+.childOne ul li a:hover,
 .childTwo ul li a:hover {
   color: #258ad7;
-
 }
 .childOne ul {
-  display:grid;
+  display: grid;
   grid-template-columns: 300px 300px; /*area of cell*/
 }
 .childOne h2:hover {
-text-decoration: underline;
+  text-decoration: underline;
 }
-.childOne ul li:hover{
+.childOne ul li:hover {
   background-color: #fafafa;
 }
 
-
 .childTwo ul {
-  display:grid;
+  display: grid;
   grid-template-columns: 300px 300px;
 }
 .childTwo h2:hover {
   text-decoration: underline;
-  }
-  .childTwo ul li:hover{
-    background-color: #fafafa;
-  }
-  
+}
+.childTwo ul li:hover {
+  background-color: #fafafa;
+}
 
 .menuHumberger {
-  
   background-color: white;
 }
 
@@ -229,9 +227,6 @@ text-decoration: underline;
   top: 100%;
   left: 0;
   width: 100%;
-}
-.navList > li:hover .menuHumberger {
-  display: block;
 }
 
 /***************medicalLicense******************/
