@@ -8,14 +8,14 @@ export default function DetailDoctors({ doctor }) {
     </main>
   );
 }
-export async function getStaticPaths() {
-  return {
-    paths: [],
-    // new paths not returned by getStaticPaths will wait for the HTML to be generated,
-    fallback: "blocking",
-  };
-}
-export async function getStaticProps(context) {
+// export async function getStaticPaths() {
+//   return {
+//     paths: [],
+//     // new paths not returned by getStaticPaths will wait for the HTML to be generated,
+//     fallback: "blocking",
+//   };
+// }
+export async function getServerSideProps(context) {
   const username = context.params.id;
   const doctorData = await axios.get(
     "https://api-dev-1.cura.healthcare/DoctorProfileAnonymous",

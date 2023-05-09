@@ -9,13 +9,12 @@ export default function Home(doctors) {
   // console.log(doctors);
   return (
     <main className="container">
+      <Head>
+        <title>كيورا|</title>
+        <link rel="icon" type="image/png" href={myIcon} />
+        {/* <link href="//db.onlinewebfonts.com/c/d78f5d2c76185fa07aaf8dd729eef33e?family=DIN+Next+LT+Arabic" rel="stylesheet" type="text/css"/> */}
+      </Head>
 
-        <Head>
-          <title>كيورا|</title>
-          <link rel="icon" type="image/png" href={myIcon} />
-          {/* <link href="//db.onlinewebfonts.com/c/d78f5d2c76185fa07aaf8dd729eef33e?family=DIN+Next+LT+Arabic" rel="stylesheet" type="text/css"/> */}
-        </Head>
-      
       <div className="home">
         <h1>FEATURED DOCTORS</h1>
         <h3 style={{ color: "#ccc", fontWeight: "300" }}>
@@ -32,7 +31,7 @@ export default function Home(doctors) {
     </main>
   );
 }
-export async function getStaticProps() {
+export async function getServerSideProps() {
   const doctorData = await axios.get(
     "https://api-dev-2.cura.healthcare/BrowserData"
   );
