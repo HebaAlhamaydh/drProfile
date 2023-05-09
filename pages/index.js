@@ -1,9 +1,8 @@
 import Head from "next/head";
 
+import axios from "axios";
 import Link from "next/link";
 import Cards from "../components/Cards";
-import axios from "axios";
-import myIcon from "../public/images/cura.png";
 
 export default function Home(doctors) {
   // console.log(doctors);
@@ -11,7 +10,7 @@ export default function Home(doctors) {
     <main className="container">
       <Head>
         <title>كيورا|</title>
-        <link rel="icon" type="image/png" href={myIcon} />
+        <link rel="icon" type="image/x-icon" href="/favicon.ico" />
         {/* <link href="//db.onlinewebfonts.com/c/d78f5d2c76185fa07aaf8dd729eef33e?family=DIN+Next+LT+Arabic" rel="stylesheet" type="text/css"/> */}
       </Head>
 
@@ -31,9 +30,9 @@ export default function Home(doctors) {
     </main>
   );
 }
-export async function getServerSideProps() {
+export async function getStaticProps() {
   const doctorData = await axios.get(
-    "https://api-dev-2.cura.healthcare/BrowserData"
+    "https://api-dev-1.cura.healthcare/BrowserData"
   );
 
   const doctors = doctorData.data;

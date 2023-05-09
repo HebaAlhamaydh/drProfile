@@ -26,7 +26,7 @@ export default function allCards(doctors) {
     </>
   );
 }
-export async function getServerSideProps() {
+export async function getStaticProps() {
   const doctorData = await axios.get(
     "https://api-dev-2.cura.healthcare/BrowserData"
   );
