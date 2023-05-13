@@ -19,38 +19,43 @@ export default function DetailDoctor({ doctor }) {
     CountryName_ar,
     CountryName_en,
     CityCityName_ar,
-    CityCityName_en
+    CityCityName_en,
   } = doctor;
- 
-  
-//////////////////////////////////////////LOAD MORE COMMENTS//////////////////
+
+  //////////////////////////////////////////LOAD MORE COMMENTS//////////////////
   const [numToShow, setNumToShow] = useState(6); // initial number of recommendations to show
 
   const handleLoadMore = () => {
     setNumToShow(numToShow + 6); // increment the number of recommendations to show
   };
   ///////////////////change the languages of the page//// //////////
-  const {locale} = useRouter ();
+  const { locale } = useRouter();
 
-const name=locale==="en"?`Dr. ${FirstName} ${LastName}`:`د. ${FirstName_ar} ${LastName_ar}`
-const country=locale==="en"?` ${CountryName_en},${CityCityName_en}`:`${CountryName_ar} ${CityCityName_ar}`
-const SpecialtyTitle=locale==="en"?`${SpecialtyTitle_en}`:`${SpecialtyTitle_ar}`
-const information=locale==="en"?`Information`:`المعلومات`
-const Reviews=locale==="en"?`Reviews`:`التقييم`
-
+  const name =
+    locale === "en"
+      ? `Dr. ${FirstName} ${LastName}`
+      : `د. ${FirstName_ar} ${LastName_ar}`;
+  const country =
+    locale === "en"
+      ? ` ${CountryName_en},${CityCityName_en}`
+      : `${CountryName_ar} ${CityCityName_ar}`;
+  const SpecialtyTitle =
+    locale === "en" ? `${SpecialtyTitle_en}` : `${SpecialtyTitle_ar}`;
+  const information = locale === "en" ? `Information` : `المعلومات`;
+  const Reviews = locale === "en" ? `Reviews` : `التقييم`;
 
   return (
     <div className={styles.container}>
       <div className={styles.rightContainer}>
         {/************** PROFILE DETAILS ************/}
-        <div className={styles.right}>
-          <Image
-            src={`https://s3.dualstack.eu-west-1.amazonaws.com/curaapps/${ProfilePicThumbnail}`}
-            width="165"
-            height="165"
-            alt="profile"
-            style={{ borderRadius: "50%", maginTop: "50px" }}
-          />
+        <Image className={styles.drImg}
+          src={`https://s3.dualstack.eu-west-1.amazonaws.com/curaapps/${ProfilePicThumbnail}`}
+          width="165"
+          height="165"
+          alt="profile"
+          style={{ borderRadius: "50%", maginTop: "50px" }}
+        />
+        <div className={styles.drInfo}>
           <h1>{name}</h1>
           <h3>{SpecialtyTitle}</h3>
           <div className={styles.rate}>
@@ -66,15 +71,19 @@ const Reviews=locale==="en"?`Reviews`:`التقييم`
 
             <div className={styles.rev}>{doctor.Rating} Reviews</div>
           </div>
-          <hr className={styles.line} />
+          {/* <hr className={styles.line} /> */}
         </div>
+       
+           {/****drDetails */}
         {/************** JOBS ************/}
-        <div className={styles.doctorProfile}>
-          {Sections.filter((section) => section.ViewTitle === "Jobs I had").map(
-            (section, index) =>
+        <div className={styles.drDetails}>
+          <div className={`${styles.doctorProfile} ${styles.jobs}`}>
+            {Sections.filter(
+              (section) => section.ViewTitle === "Jobs I had"
+            ).map((section, index) =>
               section.Items.length ? (
                 <div key={index} className={styles.doctorProfile}>
-                  <h2 >{section.EditTitle}</h2>
+                  <h2>{section.EditTitle}</h2>
                   <ul className={styles.doctorProfile}>
                     {section.Items.map((item, index) => (
                       <li key={index}>{item.Title}</li>
@@ -82,41 +91,37 @@ const Reviews=locale==="en"?`Reviews`:`التقييم`
                   </ul>
                 </div>
               ) : null
-          )}
+            )}
+          </div>
+          {/************** COUNTRY ************/}
+          <div className={`${styles.doctorProfile}${styles.contry}`}>
+            <h2>country</h2>
+            <ul className={styles.doctorProfile}>
+              <li>{country}</li>
+            </ul>
+          </div>
+          {/************** LANGUAGES ************/}
+          <div className={`${styles.doctorProfile} ${styles.lang}`}>
+            {Sections.filter((section) => section.ViewTitle === "I speak").map(
+              (section, index) =>
+                section.Items.length ? (
+                  <div key={index} className={styles.doctorProfile}>
+                    <h2>{section.EditTitle}</h2>
+                    <ul className={styles.alpha}>
+                      {section.Items.map((item, index) => (
+                        <li key={index}>{item.Title}</li>
+                      ))}
+                    </ul>
+                  </div>
+                ) : null
+            )}
+          </div>
+          <button className={`${styles.btn} ${styles.btn2}`}>
+            <a href="#">CONSULT</a>
+          </button>
         </div>
-
-        {/************** COUNTRY ************/}
-        <div className={styles.doctorProfile}>
-          <h2>country</h2>
-          <ul className={styles.doctorProfile}>
-            <li>
-             {country}
-            </li>
-          </ul>
-        </div>
-
-        {/************** LANGUAGES ************/}
-        <div className={styles.doctorProfile}>
-          {Sections.filter((section) => section.ViewTitle === "I speak").map(
-            (section, index) =>
-              section.Items.length ? (
-                <div key={index} className={styles.doctorProfile}>
-                  <h2>{section.EditTitle}</h2>
-                  <ul className={styles.alpha}>
-                    {section.Items.map((item, index) => (
-                      <li key={index}>{item.Title}</li>
-                    ))}
-                  </ul>
-                </div>
-              ) : null
-          )}
-        </div>
-
-        <button className={`${styles.btn} ${styles.btn2}`}>
-          <a href="#">CONSULT</a>
-        </button>
       </div>
-      {/************************************section Two************************************* */}
+      {/************************************section Two (leftContainer)************************************* */}
       {/* *****************المعلومات**************/}
       {/***************videoes ************/}
       {/* <video controls src={`https://s3.dualstack.eu-west-1.amazonaws.com/curaapps/${videoSec.Items[0].MediaItemS3Key}`}></video> */}
@@ -125,7 +130,7 @@ const Reviews=locale==="en"?`Reviews`:`التقييم`
           style={{
             fontWeight: "bold",
             fontSize: "45px",
-            padding: " 30px 30px 15px 0",
+         
           }}
         >
           {information}
@@ -179,7 +184,13 @@ const Reviews=locale==="en"?`Reviews`:`التقييم`
         )}
         {/* ****************التقييم***********/}
 
-        <h1 style={{ fontWeight: "bold", fontSize:"40px",padding: " 30px 30px 0 0" }}>
+        <h1
+          style={{
+            fontWeight: "bold",
+            fontSize: "40px",
+            padding: " 30px 30px 0 0",
+          }}
+        >
           {Reviews}
         </h1>
 
@@ -212,10 +223,10 @@ const Reviews=locale==="en"?`Reviews`:`التقييم`
                         style={{ borderRadius: "50%" }}
                       />
                     </div>
-                    <div style={{margin:"25px"}}>
-                        <h3>{item.RecommendationText}</h3>
-                        <h5>{item.RecommenderName}</h5>
-                        <h6>{formattedDate}</h6> 
+                    <div style={{ margin: "25px" }}>
+                      <h3>{item.RecommendationText}</h3>
+                      <h5>{item.RecommenderName}</h5>
+                      <h6>{formattedDate}</h6>
                     </div>
                   </div>
                 );

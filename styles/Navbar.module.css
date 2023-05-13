@@ -7,8 +7,8 @@
   color: black;
   display: flex;
   align-items: center;
-  padding: 0 100px;
-  height: 70px;
+  padding: 0 20px;
+  height:50px;
   position: fixed;
   left: 0;
   right: 0;
@@ -16,13 +16,25 @@
   z-index: 150;
   margin: 0;
   border-bottom: 1px solid #eaeaea;
+  justify-content: flex-start;
+
+}
+.btn {
+  margin-inline-start: auto;
+  /* display: flex; */
+  display: none;
+  /* align-items: center; */
+}
+.language {
+  display: none;
 }
 
 .navList {
   list-style: none;
   display: flex;
-  gap: 2rem;
+  gap: 1rem;
   align-items: center;
+  justify-content: flex-start;
   width: 100%;
   height: 30px;
   margin: 0;
@@ -30,7 +42,7 @@
 }
 .navList li {
   width: auto;
-  margin-right: 20px;
+  /* margin-right: 20px; */
 }
 .Navbar_btn__2_IOi {
   margin-inline-start: auto !important;
@@ -44,13 +56,12 @@
   border: none;
   border: 1px solid #eaeaea !important;
   color: #303030 !important;
-  transition: 0.25s ease;
+  /* transition: 0.25s ease; */
   background-color: transparent !important;
-  padding: 10px 70px 10px 45px;
-  /* display: block; */
+  padding: 10px 60px 10px 45px;
   flex-grow: 1;
   width: 100%;
-  height: 4.5rem;
+  height: 3.1rem;
   font-size: 16px !important;
 }
 .searchIcon {
@@ -68,23 +79,22 @@
 .image {
   height: 30px;
 }
-.btn {
-  margin-inline-start: auto;
-  display: flex;
-}
+
 .login {
   border: 1px solid #ccc;
+  border-radius: 5px;
+  margin-top: 10px;
+  padding:10px ;
 }
 .login:hover {
   background-color: #f7f7f7;
 }
-.btn li {
-  border-radius: 5px;
-  padding: 13px 30px;
-  margin: 5px;
-}
+
 .signup {
   background-color: #3996dd;
+  margin-top: 10px;
+  padding:10px ;
+  border-radius: 5px;
 }
 .signup:hover {
   background-color: #258ad7;
@@ -99,7 +109,7 @@
   display: flex;
   align-items: center;
   border: none;
-  padding: 11px;
+  /* padding: 11px; */
   border-right: 1px solid #eaeaea !important;
   background-color: transparent;
 }
@@ -118,7 +128,7 @@
 
 .dropdownMenu {
   position: fixed;
-  top: 4.375rem;
+  top: 3.1rem;
   left: 0;
   right: 0;
   z-index: 100;
@@ -163,60 +173,83 @@
 /************dropDown of  menuHumberger********/
 .dropDownmenuHumberger {
   position: fixed;
-  top: 4.375rem;
+  display:flex;
+  flex-direction: column;
+  top: 3.1rem;
   left: 0;
   right: 0;
   z-index: 100;
-  padding: 40px 170px 15px;
+  padding:0 20px 15px;
   opacity: 0;
   visibility: hidden;
   background-color: white;
   transition: all 300ms ease;
-  display: flex; /* add this */
+ 
 }
 .dropDownmenuHumberger.active {
   transform: translateY(0);
   opacity: 1;
   visibility: visible;
 }
-.childOne ul li,
-.childTwo ul li {
+.more {
+  text-decoration: none;
+  color: black;
+}
+.more:hover{
+  text-decoration: underline;
+} 
+.companyH2 {
+  padding-top: 20px ;
+}
+.childOne ul {
+  display: none;
+}
+.activeChildOne ul{
+  display: grid;
+  grid-template-columns: 300px 300px; 
+}
+.activeChildOne ul li,
+.activeChildTwo ul li {
   padding: 10px;
 }
-.childOne ul li a,
-.childTwo ul li a {
+.activeChildOne ul li a,
+.activeChildTwo ul li a {
   text-decoration: none;
   color: black;
   font-size: 20px;
-  /* font-weight: bold; */
 }
 
-.childOne ul li a:hover,
-.childTwo ul li a:hover {
+.activeChildOne ul li a:hover,
+.activeChildTwo ul li a:hover {
   color: #258ad7;
 }
-.childOne ul {
-  display: grid;
-  grid-template-columns: 300px 300px; /*area of cell*/
-}
-.childOne h2:hover {
+
+.activeChildOne h2:hover {
   text-decoration: underline;
 }
-.childOne ul li:hover {
+.activeChildOne ul li:hover {
   background-color: #fafafa;
 }
 
 .childTwo ul {
+  display: none;
+}
+.activeChildTwo ul {
   display: grid;
   grid-template-columns: 300px 300px;
 }
-.childTwo h2:hover {
+.activeChildTwo h2:hover {
   text-decoration: underline;
 }
-.childTwo ul li:hover {
+.activeChildTwo ul li:hover {
   background-color: #fafafa;
 }
-
+.childThree ul {
+  display: grid;
+  gap: 2rem;
+  text-align: center;
+  grid-template-columns: 250px 250px; /*area of cell*/
+}
 .menuHumberger {
   background-color: white;
 }
@@ -229,6 +262,47 @@
   width: 100%;
 }
 
+.footer {
+  display:flex;
+  justify-content: space-between;
+  border-top: 1px solid #e5e5e4;
+    border-bottom: 1px solid #e5e5e4;
+    padding: 20px 0 20px;
+    font-size: 15px;
+    font-weight: 500;
+   
+}
+.socialMedia a{
+  padding: 0 8px;
+}
+
+/* tab1*/
+@media (min-width: 600px) {
+
+}
+/* tab2*/
+@media (min-width: 850px) {
+.dropDownmenuHumberger {
+    padding: 40px 170px 15px;
+}
+.child {
+display: flex;
+padding-block: 20px 60px;
+width: 600px;
+
+}
+.childThree {
+  display:none;
+}
+.childTwo ul {
+  display: grid;
+  grid-template-columns: 300px 300px;
+}
+.childOne ul {
+  display: grid;
+  grid-template-columns: 300px 300px;
+}
+}
 /***************medicalLicense******************/
 
 .medicalLicense a {
@@ -238,14 +312,43 @@
   width: 100%;
   padding: 10px;
   text-align: center;
-  line-height: 1.7;
   text-decoration: none;
-  margin-top: auto;
   width: 100%;
-  padding-top: 70px;
-  font-size: 22px;
+  padding-top: 50px;
   font-weight: 500 !important;
 }
 .medicalLicense a:hover {
   text-decoration: underline;
 }
+
+/* tab1*/
+@media (min-width: 600px) {
+  .language {
+    display: inline-block;
+    
+  }
+  .langBtn {
+  padding: 11px;
+  }
+}
+/* tab2*/
+@media (min-width: 850px) {
+  .language {
+    display: inline-block;
+  }
+  .btn {
+    display: flex;
+   /* padding:100px 5px; */
+  }
+  .btn li {
+    border-radius: 5px;
+    padding: 4px 25px;
+    margin: 5px;
+  }
+}
+/*desktop*/
+/* @media (min-width: 1000px) {
+  .language {
+    display: inline-block;
+  }
+} */

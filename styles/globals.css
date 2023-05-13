@@ -12,9 +12,11 @@ body{
   font-family: "DIN Next LT Arabic"; 
  
 }
+/*arabic*/
 .layout {
   direction: rtl;
 }
+/*english*/
 .layout.direction {
   direction: ltr;
 }
