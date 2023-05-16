@@ -198,6 +198,8 @@
   text-decoration: underline;
 }
 .companyH2 {
+  display: flex;
+  justify-content: space-between;
   padding-top: 40px;
   padding-bottom: 4px;
   font-size: 18px;

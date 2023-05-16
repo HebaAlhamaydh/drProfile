@@ -4,6 +4,9 @@ import React, { useState } from "react";
 import search from "../public/images/search.png";
 
 import { GiHamburgerMenu } from "react-icons/gi";
+import { BiChevronDown } from "react-icons/bi";
+import { BiChevronUp } from "react-icons/bi";
+
 import { CgClose } from "react-icons/cg";
 import CuraLogo from "./CuraLogo";
 import { useRouter } from "next/router";
@@ -89,6 +92,7 @@ export default function Navbar() {
                 <a href="#" className={styles.link}>
                   LOGIN
                 </a>
+               
               </li>
               <li className={`${styles.link} ${styles.signup}`}>
                 <a href="#" className={styles.link}>
@@ -129,9 +133,11 @@ export default function Navbar() {
                   <h2> {selectLanguage}</h2>
                   <ul className={styles.menuList}>
                     <li>
+                   
                       <Link href={asPath} locale="en" onClick={handleLinkClick}>
                         English
                       </Link>
+                     
                     </li>
                     <li>
                       <Link href={asPath} locale="ar" onClick={handleLinkClick}>
@@ -175,8 +181,20 @@ export default function Navbar() {
                         onClick={handleClickCompany}
                         className={styles.moreH}
                       >
-                        {company}
+                        {company} 
                       </a>
+
+                      {isCompanyActive  ? (
+                  <BiChevronUp  onClick={handleClickCompany}
+                  className={styles.moreH}/>
+                ) : (
+                  <BiChevronDown  onClick={handleClickCompany}
+                  className={styles.moreH}/>
+                )}
+
+                     
+
+
                     </h2>
                     <ul className={`${styles.menuItem}`}>
                       <li>
@@ -232,8 +250,16 @@ export default function Navbar() {
                         onClick={handleClickMore}
                         className={styles.moreH}
                       >
-                        {more}
+                        {more} 
                       </a>
+                      {isMoreActive  ? (
+                  <BiChevronUp  onClick={handleClickMore}
+                  className={styles.moreH}/>
+                ) : (
+                  <BiChevronDown  onClick={handleClickMore}
+                  className={styles.moreH}/>
+                )}
+
                     </h2>
                     <ul className={`${styles.menuItem}`}>
                       <li>
