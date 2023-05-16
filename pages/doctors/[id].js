@@ -18,7 +18,7 @@ export async function getStaticPaths() {
 export async function getStaticProps(context) {
   const username = context.params.id;
   const doctorData = await axios.get(
-    "https://api-dev-1.cura.healthcare/DoctorProfileAnonymous",
+    "https://api-dev-2.cura.healthcare/DoctorProfileAnonymous",
     { params: { username: username, ForceRenderIfNotVerified: false } }
   );
 

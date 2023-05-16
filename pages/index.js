@@ -32,7 +32,7 @@ export default function Home(doctors) {
 }
 export async function getStaticProps() {
   const doctorData = await axios.get(
-    "https://api-dev-1.cura.healthcare/BrowserData"
+    "https://api-dev-2.cura.healthcare/BrowserData"
   );
 
   const doctors = doctorData.data;

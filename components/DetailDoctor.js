@@ -126,30 +126,14 @@ export default function DetailDoctor({ doctor }) {
       {/***************videoes ************/}
       {/* <video controls src={`https://s3.dualstack.eu-west-1.amazonaws.com/curaapps/${videoSec.Items[0].MediaItemS3Key}`}></video> */}
       <div className={styles.leftContainer}>
-        <h1
+        <h2
           style={{
             fontWeight: "bold",
-            fontSize: "45px",
-         
+            fontSize: "37px",
           }}
         >
           {information}
-        </h1>
-
-        {/* {Sections.filter(
-          (section) =>section.ViewTitle === "Video Intro."
-        ).map((section, index) =>
-          section.Items.length ? (
-            <div key={index} className={styles.card}>
-              <h4 className={styles.headerInfo}>{section.ViewTitle}</h4>
-              <ul className={styles.contentCard}>
-                  <li key={index}>
-                  <video controls src={`https://s3.dualstack.eu-west-1.amazonaws.com/curaapps/${section.Items[0].MediaItemS3Key}`}></video>
-                  </li>
-              </ul>
-            </div>
-          ) : null
-        )} */}
+        </h2>
 
         {Sections.filter(
           (section) =>
@@ -184,15 +168,15 @@ export default function DetailDoctor({ doctor }) {
         )}
         {/* ****************التقييم***********/}
 
-        <h1
+        <h2
           style={{
             fontWeight: "bold",
-            fontSize: "40px",
+            fontSize: "37px",
             padding: " 30px 30px 0 0",
           }}
         >
           {Reviews}
-        </h1>
+        </h2>
 
         {Sections.filter(
           (section) => section.ViewTitle === "Nice Words From Others"
