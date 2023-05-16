@@ -31,16 +31,9 @@ export default function DetailDoctor({ doctor }) {
   ///////////////////change the languages of the page//// //////////
   const { locale } = useRouter();
 
-  const name =
-    locale === "en"
-      ? `Dr. ${FirstName} ${LastName}`
-      : `د. ${FirstName_ar} ${LastName_ar}`;
-  const country =
-    locale === "en"
-      ? ` ${CountryName_en},${CityCityName_en}`
-      : `${CountryName_ar} ${CityCityName_ar}`;
-  const SpecialtyTitle =
-    locale === "en" ? `${SpecialtyTitle_en}` : `${SpecialtyTitle_ar}`;
+  const name = locale === "en"? `Dr. ${FirstName} ${LastName}`: `د. ${FirstName_ar} ${LastName_ar}`;
+  const country =locale === "en"? ` ${CountryName_en},${CityCityName_en}`: `${CountryName_ar} ${CityCityName_ar}`;
+  const SpecialtyTitle = locale === "en" ? `${SpecialtyTitle_en}` : `${SpecialtyTitle_ar}`;
   const information = locale === "en" ? `Information` : `المعلومات`;
   const Reviews = locale === "en" ? `Reviews` : `التقييم`;
 

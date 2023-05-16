@@ -21,7 +21,9 @@ body{
   direction: ltr;
 }
 
-
+button{
+  font: inherit;
+}
 
 .container-card{
 display:flex;

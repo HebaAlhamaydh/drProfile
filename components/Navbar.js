@@ -163,6 +163,7 @@ export default function Navbar() {
                 }`}
               >
                 <div className={styles.companyMoreMobile}>
+                  
                   <div
                     className={
                       isCompanyActive ? styles.activeCompany : styles.company
@@ -221,7 +222,6 @@ export default function Navbar() {
                       </li>
                     </ul>
                   </div>
-
                   <div
                     className={isMoreActive ? styles.activeMore : styles.more}
                   >
@@ -261,6 +261,9 @@ export default function Navbar() {
                       </li>
                     </ul>
                   </div>
+                  
+                  
+                  
                 </div>
                 <div className={styles.companyMoreDesktop}>
                   <div className={styles.company}>

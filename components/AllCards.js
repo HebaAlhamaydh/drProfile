@@ -18,11 +18,9 @@ export default function AllCards({ doctor }) {
       <div className={styles.card}>
         <div className={styles.card_img}>
           <Image
-            src={
-              PrimaryImage
-                ? PrimaryImage
-                : "https://cdn.pixabay.com/photo/2015/06/10/16/36/mark-804938_640.jpg"
-            }
+            src={ PrimaryImage
+               
+}
             alt="Pancake"
             width="100"
             height="100"

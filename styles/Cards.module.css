@@ -1,33 +1,10 @@
 .card {
   border: 1px solid #ccc;
   padding: 20px;
-  width: 500px;
-  height: 222px;
-
-  /* text-align: center; */
+  /* width: 500px; */
+  /* height: 222px; */
 }
 
-/* .title  {
-    width:100px;
-     text-overflow:"ellipsis";
-     overflow:"hidden";
-     
-  } */
-
-.title :hover {
-  /* overflow: visible; */
-  /* display: block; */
-}
-/* .title {
-    overflow: hidden;
-    height: 20px;
-    line-height: 20px;
-    text-overflow: ellipsis;
-    white-space: nowrap;
-  }
-  .title:hover {
-    height: auto;
-  } */
 .badge {
   margin-left: 8px;
   text-transform: uppercase;
@@ -58,4 +35,34 @@
   height: 90px; /* set the desired height */
   border-radius: 50%; /* set the border radius to half of the width/height */
   overflow: hidden; /* hide any parts of the image that are outside the circle */
+  position: relative;
+  z-index: -1;
+}
+.titleContent {
+
+    display: flex;
+align-items: start;
+justify-content: start;
+ 
+}
+.linkTitle {
+text-decoration: none;
+color: black;
+}
+.titleContent .linkTitle:hover{
+  text-decoration: underline;
+}
+.title {
+  /* width:170px; */
+  white-space: nowrap;
+  /* overflow: hidden;
+  text-overflow: ellipsis; */
+}
+.linkSubTitle{
+  white-space: nowrap;
+  text-decoration: none;
+color: white;
+}
+.linkSubTitle:hover {
+  text-decoration: underline;
 }

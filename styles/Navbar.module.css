@@ -103,7 +103,7 @@
   border-right: 1px solid #eaeaea !important;
   background-color: transparent;
 }
-.language .langBtn{
+.language .langBtn {
   display: none;
 }
 
@@ -192,7 +192,7 @@
   text-decoration: none;
   color: black;
   font-size: 18px;
-  border:none;
+  border: none;
 }
 .moreH:hover {
   text-decoration: underline;
@@ -239,11 +239,10 @@
 .selectLanguageMobile {
   display: flex;
   justify-content: space-between;
-  padding-right: 30px;
+  /* padding-right: 30px; */
 }
-.childThree{
+.childThree {
   margin-top: auto;
- 
 }
 .childThree ul {
   display: flex;
@@ -273,9 +272,8 @@
   padding: 15px 20px;
   font-size: 15px;
   font-weight: 500;
-  margin-bottom:40px;
+  margin-bottom: 40px;
 }
-
 
 .socialMedia a {
   padding: 0 8px;
@@ -306,7 +304,7 @@
   .language {
     display: inline-block;
   }
-  .language .langBtn{
+  .language .langBtn {
     display: flex;
     padding: 11px;
   }
@@ -316,15 +314,20 @@
   .companyMoreDesktop {
     display: flex;
     padding-block: 20px 60px;
-    width: 600px;
   }
+  .companyMoreDesktop > * {
+    width: 100%;
+  }
+
   .more ul,
   .company ul {
     display: grid;
-    grid-template-columns: 250px 250px;
- 
+    grid-template-columns: 1fr 1fr;
   }
-
+  .dropDownmenuHumberger {
+    padding: 0px 50px 15px;
+    height: 70%;
+  }
   .company ul li,
   .more ul li {
     padding: 10px;
@@ -368,22 +371,22 @@
     margin: 5px;
   }
   .dropDownmenuHumberger {
-    padding: 40px 170px 15px;
+    padding: 40px 70px 20px;
     height: 50%;
   }
   .dropdownMenu {
-    padding: 60px 126px  15px;
-  } 
+    padding: 60px 126px 15px;
+  }
   .menuList {
     padding-block: 20px 60px;
   }
- 
+
   .childThree {
     display: none;
   }
- .footer {
-  margin-bottom:0px;
- }
+  .footer {
+    margin-bottom: 0px;
+  }
   .selectLanguageMobile {
     display: none;
   }
@@ -394,6 +397,7 @@
 }
 /*desktop*/
 @media (min-width: 1280px) {
- 
-
-} 
+  .dropDownmenuHumberger {
+    padding: 40px 170px 20px;
+  }
+}
