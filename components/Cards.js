@@ -32,7 +32,7 @@ export default function Cards({ doctor }) {
     setIsHovered(false);
   };
 
-  const truncatedTitle = title.length > 15 ? `${title.slice(0, 15)}...` : title;
+  const truncatedTitle = title.length > 13 ? `${title.slice(0, 13)}...` : title;
 
   return (
     <>
@@ -68,12 +68,12 @@ export default function Cards({ doctor }) {
           ) : subtitle === "NON MEDICAL - SPECIALIST" || subtitle === "أخصائي غير طبيب" ? (
             <div className={`${styles.badge} ${styles.badge4}`}  onMouseEnter={handleMouseEnter}
             onMouseLeave={handleMouseLeave}>
-               <a  href="#" className={styles.linkSubTitle}>{isHovered ? subtitle : `${subtitle.slice(0, 15)}...`}</a> 
+               <a  href="#" className={styles.linkSubTitle}>{isHovered ? subtitle : `${subtitle.slice(0, 13)}...`}</a> 
             </div>
           ) : subtitle === "GENERAL PRACTITIONER" || subtitle === " طبيب عام" ? (
             <div className={`${styles.badge} ${styles.badge4}`}  onMouseEnter={handleMouseEnter}
             onMouseLeave={handleMouseLeave}>
-            <a  href="#" className={styles.linkSubTitle}>{isHovered ? subtitle : `${subtitle.slice(0, 15)}...`}</a> 
+            <a  href="#" className={styles.linkSubTitle}>{isHovered ? subtitle : `${subtitle.slice(0, 13)}...`}</a> 
             </div>
           ) : null}
         </div>
