@@ -17,7 +17,7 @@ export default function Home(doctors) {
       <div className="home">
         <h1>FEATURED DOCTORS</h1>
         <h3 style={{ color: "#ccc", fontWeight: "300" }}>
-          <Link href="/allCards">SHOW ALL</Link>
+          <Link href="/Search">SHOW ALL</Link>
         </h3>
       </div>
 
