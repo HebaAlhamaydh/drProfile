@@ -8,6 +8,8 @@ export default function DetailDoctors({ doctor }) {
     </main>
   );
 }
+//fetch data to create dynamic
+//to determine for next how many pages i have to pass it
 export async function getStaticPaths() {
   return {
     paths: [],
@@ -15,6 +17,7 @@ export async function getStaticPaths() {
     fallback: "blocking",
   };
 }
+//fetch data and pass it as props to the component
 export async function getStaticProps(context) {
   const username = context.params.id;
   const doctorData = await axios.get(

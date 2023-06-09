@@ -1,0 +1,124 @@
+.filterContainer {
+  display: grid;
+  grid-column: 1fr;
+  padding: 20px;
+  gap: 10px;
+  border: 1px solid #ccc;
+}
+.headerFilter {
+  display: flex;
+  justify-content: space-between;
+  border-bottom: 1px solid #e5e5e5;
+}
+/* .headerFiter h3 {
+  padding: 0 30px 15px !important;
+} */
+.headerSection {
+  color: #9b9b9b;
+}
+
+.sortBy {
+  display: grid;
+  grid-template-columns: 130px 130px;
+  gap: 1px;
+  border: 1px solid #ccc;
+  color: #9b9b9b;
+}
+
+.availabilityItem {
+  grid-row: 1/2;
+  grid-column: 1/2;
+  border-right: 1px solid #e5e5e5;
+  padding: 10px;
+}
+.itemSelection:hover {
+  background-color: #f7f7f7;
+}
+
+.spcialityItem {
+  grid-row: 1/2;
+  grid-column: 2/3;
+  padding: 10px;
+}
+
+.reviewsItem {
+  grid-row: 2/3;
+  grid-column: 1/3;
+  border-top: 1px solid #e5e5e5;
+  text-align: center;
+  padding: 10px;
+}
+
+.radioButton {
+  display: none;
+  /* appearance: none;
+  -webkit-appearance: none;
+  -moz-appearance: none; */
+}
+
+/* .radioButton:checked {
+  background-color: #333;
+} */
+
+.radioLabel {
+  cursor: pointer;
+}
+
+.radioButton:checked + .radioLabel {
+  color: blue;
+}
+
+.availaility {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  border: 1px solid #ccc;
+  color: #9b9b9b;
+}
+.onlineItem {
+  padding: 10px;
+  border-right: 1px solid #e5e5e5;
+}
+.awayItem {
+  padding: 10px;
+  border-right: 1px solid #e5e5e5;
+}
+.offlineItem {
+  padding: 10px;
+}
+.Country,
+.nationality {
+  border: 1px solid #ccc;
+  display: flex;
+  width: 100%;
+  padding: 10px;
+  align-items: center;
+  /* justify-content: space-between; */
+}
+.flagCountry {
+  width: 30px; /* Adjust the desired width */
+  height: 30px;
+  background-position: 50%;
+  margin-right: 10px;
+  background-size: cover;
+  background-image: url(data:image/png;base64,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);
+}
+.selectWrapper {
+  flex-grow: 1; /* Allow the wrapper to grow and take available space */
+}
+
+.select {
+  width: 100%;
+}
+.gender {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  border: 1px solid #ccc;
+  color: #9b9b9b;
+}
+.maleItem {
+  padding: 10px;
+  border-right: 1px solid #e5e5e5;
+}
+.femaleItem {
+  padding: 10px;
+}

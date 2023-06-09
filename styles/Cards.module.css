@@ -1,8 +1,6 @@
 .card {
   border: 1px solid #ccc;
   padding: 20px;
-  /* width: 500px; */
-  /* height: 222px; */
 }
 
 .badge {
@@ -39,17 +37,15 @@
   z-index: -1;
 }
 .titleContent {
-
-    display: flex;
-align-items: start;
-justify-content: start;
- 
+  display: flex;
+  align-items: start;
+  justify-content: start;
 }
 .linkTitle {
-text-decoration: none;
-color: black;
+  text-decoration: none;
+  color: black;
 }
-.titleContent .linkTitle:hover{
+.titleContent .linkTitle:hover {
   text-decoration: underline;
 }
 .title {
@@ -58,10 +54,10 @@ color: black;
   /* overflow: hidden;
   text-overflow: ellipsis; */
 }
-.linkSubTitle{
+.linkSubTitle {
   white-space: nowrap;
   text-decoration: none;
-color: white;
+  color: white;
 }
 .linkSubTitle:hover {
   text-decoration: underline;
